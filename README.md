@@ -18,12 +18,19 @@ Examples of usage are provided in the Benchmark directory.
 The samples directory contains makefiles to run the tests (compilation of routines and run of Abaqus) + extractions of results through a Python scrpt and plot of some XY curves.
 
 ## List of Fortran routines
+The main Fortran routines are in the `Sources` directory aus correspond to:
 - **JohnsonCook.f** : Main core of the Johnson-Cook model
 - **VUHARD.f** : Implementation of a user material through a VUHARD subroutine
 - **VUMAT-Bisection.f** : Implementation of a user material through a VUMAT subroutine / radial return / bissection solver
 - **VUMAT-Direct.f** : Implementation of a user material through a VUMAT subroutine / explicit direct solver
 - **VUMAT-NR.f** : Implementation of a user material through a VUMAT subroutine / radial return / Newton-Raphson solver
 - **VUMAT-NR-NS.f** : Implementation of a user material through a VUMAT subroutine / radial return / Newton-Raphson solver with numerical evaluation of the derivatives
+
+TANH and modified TANH law are in subdirectory `Sources/TANH_Law` and correspond to:
+- **modifiedTANH_Bisection.f** : Implementation of a modified TANH model through a VUMAT subroutine / radial return / bissection solver
+- **modifiedTANH_NS_Newton.f** : Implementation of a modified TANH model through a VUMAT subroutine / radial return / Newton-Raphson solver with numerical evaluation of the derivatives
+- **TANH_Bisection.f** : Implementation of a TANH model through a VUMAT subroutine / radial return / bissection solver
+- **TANH_NS_Newton.f** : Implementation of a TANH model through a VUMAT subroutine / radial return / Newton-Raphson solver with numerical evaluation of the derivatives
 
 ## List of Samples
 - **Element-Radial** : Single axi-symmetric element under radial expansion
